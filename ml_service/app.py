@@ -42,4 +42,4 @@ def analyze():
     return jsonify({"sentiment": sentiment, "remedy": remedy})
 
 if __name__ == "__main__":
-    app.run(port=5003, debug=True)
+    app.run(port=5001, debug=True)  # Changed port to 5001 to avoid conflict
