@@ -1,6 +1,6 @@
 
-# **MERN-Based Disease Prediction & Sentiment Analysis System**
-This project is a **MERN Stack-based Web Application** that predicts diseases based on user symptoms, performs **Sentiment Analysis**, and provides **Home Remedies**.  
+# **VitalMind**
+This project is a **VitalMind** that predicts diseases based on user symptoms, performs **Sentiment Analysis**, and provides **Home Remedies**.  
 Additionally, it integrates a **Flask-based AI service** for natural language processing (NLP) tasks.  
 
 ---
