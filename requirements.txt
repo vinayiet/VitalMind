@@ -1,0 +1,2 @@
+fastapi uvicorn pymongo pydantic[dotenv] python-dotenv
+ transformers torch
