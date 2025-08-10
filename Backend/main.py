@@ -3,6 +3,9 @@ from uuid import uuid4
 from datetime import datetime
 from .database import users_collection, moods_collection
 from .models import MoodCheck
+from .models import MoodCheck, CrisisCheck
+from .ai_service import analyze_message
+
 
 app = FastAPI()
 
@@ -40,3 +43,19 @@ async def mood_check(data: MoodCheck):
         message = "Glad to see your mood today 🌸. Keep going strong!"
 
     return {"status": "saved", "response": message}
+
+
+
+@app.post("/crisis-check")
+async def crisis_check(data: CrisisCheck):
+    analysis = analyze_message(data.message)
+    response = {"analysis": analysis}
+
+    if analysis["risk"] >= 0.8:
+        response["helplines"] = [
+            {"name": "AASRA", "number": "91-9820466726"},
+            {"name": "iCall", "number": "9152987821"},
+            {"name": "Snehi", "number": "9582208181"}
+        ]
+
+    return response

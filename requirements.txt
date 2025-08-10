@@ -1,2 +1,8 @@
-fastapi uvicorn pymongo pydantic[dotenv] python-dotenv
- transformers torch
+fastapi
+uvicorn
+pymongo
+pydantic[dotenv]
+python-dotenv
+transformers
+torch
+huggingface-hub
